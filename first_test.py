@@ -1,3 +1,6 @@
+from functools import reduce
+
+
 def spam(number):
     """
     Function should return something like this:
@@ -25,10 +28,11 @@ def my_sum(list_of_numbers):
     Не использовать встроенные функции суммирования.
     """
 
-    lists_sum = 0
-    for i in list_of_numbers:
-        lists_sum += i
-    return lists_sum
+    # lists_sum = 0
+    # for i in list_of_numbers:
+    #     lists_sum += i
+    # return lists_sum
+    return reduce(lambda a, b: a + b, list_of_numbers)
 
 
 def shortener(string):
